@@ -4,5 +4,5 @@ include "../database/discsDb.php";
 
 header('Content-Type: application/json');
 
-echo json_encode($discs);
+echo json_encode($dbDiscs);
 ?>
