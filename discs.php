@@ -12,9 +12,11 @@ include __DIR__ . "/database/discsDb.php";
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="css/style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     </head>
     <body>
-        <div>
+        <div id="app">
             <header>
                 <div class="logo">
                     <img src="img/spotify-logo.png">
@@ -23,25 +25,20 @@ include __DIR__ . "/database/discsDb.php";
             <main>
                 <div class="main-container">
                     <div class="discs-container container">
-                    <?php
-                    foreach ($dbDiscs as $disk) {
-                    ?>
-                        <div class="disk-card">
+                        <div class="disk-card" v-for="disk in discsList">
                             <div class="disk-cover">
-                                <img src="<?php echo $disk['poster'] ?>" alt="">
+                                <img :src="disk.poster" :alt="disk.title">
                             </div>
-                            <h4><?php echo $disk['title'] ?></h4>
+                            <h4>{{disk.title}}</h4>
                             <div class="info">
-                                <p><?php echo $disk['author'] ?></p>
-                                <p><?php echo $disk['year'] ?></p>
+                                <p>{{disk.author}}</p>
+                                <p>{{disk.year}}</p>
                             </div>
                         </div>
-                    <?php    
-                    }
-                    ?>
                     </div>
                 </div>
             </main>
         </div>
+        <script src="js/script.js"></script>
     </body>
 </html>
