@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1E2D3B;
+}
+
+/* Header */
+header {
+    background-color: #2E3A46;
+    height: 60px;
+    display: flex;
+}
+
+.logo img {
+    height: 100%;
+    cursor: pointer;
+}
+/* /Header */
+
+/* Main */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.discs-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.disk-card {
+    background-color: #2E3A46;
+    padding: 20px;
+    margin: 10px 15px;
+    width: calc(20% - 30px);
+}
+
+.disk-card img {
+    width: 100%;
+}
+
+h4 {
+    padding: 20px 0;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.info {
+    text-align: center;
+    color: #808080;
+    padding: 10px 0;
+}
+/* /Main */
