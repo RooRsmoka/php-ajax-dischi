@@ -9,6 +9,10 @@ body {
     background-color: #1E2D3B;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /* Header */
 header {
     background-color: #2E3A46;
@@ -23,9 +27,8 @@ header {
 /* /Header */
 
 /* Main */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+.main-container {
+    padding: 40px;
 }
 
 .discs-container {
@@ -40,7 +43,7 @@ header {
     width: calc(20% - 30px);
 }
 
-.disk-card img {
+.disk-cover img {
     width: 100%;
 }
 
