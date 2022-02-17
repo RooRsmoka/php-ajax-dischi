@@ -21,23 +21,25 @@ include __DIR__ . "/database/discsDb.php";
                 </div> 
             </header>
             <main>
-                <div class="discs-container container">
-                <?php
-                foreach ($dbDiscs as $disk) {
-                ?>
-                    <div class="disk-card">
-                        <div>
-                            <img src="<?php echo $disk['poster'] ?>" alt="">
+                <div class="main-container">
+                    <div class="discs-container container">
+                    <?php
+                    foreach ($dbDiscs as $disk) {
+                    ?>
+                        <div class="disk-card">
+                            <div class="disk-cover">
+                                <img src="<?php echo $disk['poster'] ?>" alt="">
+                            </div>
+                            <h4><?php echo $disk['title'] ?></h4>
+                            <div class="info">
+                                <p><?php echo $disk['author'] ?></p>
+                                <p><?php echo $disk['year'] ?></p>
+                            </div>
                         </div>
-                        <h4><?php echo $disk['title'] ?></h4>
-                        <div class="info">
-                            <p><?php echo $disk['author'] ?></p>
-                            <p><?php echo $disk['year'] ?></p>
-                        </div>
+                    <?php    
+                    }
+                    ?>
                     </div>
-                <?php    
-                }
-                ?>
                 </div>
             </main>
         </div>
